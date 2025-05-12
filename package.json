@@ -28,7 +28,7 @@
     "install": "node-gyp-build",
     "prepare": "husky install",
     "prebuild": "npm run clean",
-    "build": "prebuildify -t 16.9.1 -t 18.7.0 -t 20.5.0 -t 22.2.0 --strip --napi false",
+    "build": "prebuildify -t 16.9.1 -t 18.7.0 -t 20.5.0 -t 22.2.0 -t 24.0.1 --strip --napi false",
     "build:darwin": "npm run build -- --arch x64+arm64",
     "build:win32": "npm run build",
     "clean": "rimraf build/ coverage/ prebuilds/",
@@ -41,7 +41,7 @@
     "node": ">=16.9.1"
   },
   "dependencies": {
-    "nan": "^2.19.0",
+    "nan": "^2.22.2",
     "node-gyp-build": "^4.8.1"
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "mocha": "^10.2.0",
-    "node-gyp": "10.1.0",
+    "node-gyp": "^11.2.0",
     "prebuildify": "^6.0.1",
     "rimraf": "^5.0.9",
     "semver": "^7.5.4",

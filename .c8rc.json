@@ -1,0 +1,6 @@
+{
+    "reporter": ["lcov"],
+    "all": true,
+    "exclude": ["index.test.js", "coverage/*", ".eslintrc.js", "test/*", "build.js", "index.d.ts"]
+}
+

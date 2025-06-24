@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [16, 18, 20, 22, 24]
+        node: [18, 20, 22, 24]
         os: [ubuntu-latest, macos-latest, windows-latest]
     name: Node v${{ matrix.node }} (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
@@ -33,12 +33,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-      - name: Update npm
-        run: npm install -g npm@9 # npm 10 does not support node 16
-      # new versions of python don't include distutils. setuptools provides it.
-      - name: Install setuptools
-        run: pip install setuptools
       - name: Install dependencies and build
-        run: npm ci
+        run: npm install
       - name: Test
         run: npm test

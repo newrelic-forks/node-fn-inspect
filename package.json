@@ -1,5 +1,5 @@
 {
-  "name": "@contrast/fn-inspect",
+  "name": "@newrelic/fn-inspect",
   "version": "4.4.0",
   "description": "Retrieve function name and line number from a function reference",
   "keywords": [
@@ -9,12 +9,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Contrast-Security-Inc/node-fn-inspect.git"
+    "url": "git+https://github.com/newrelic-forks/node-fn-inspect.git"
   },
   "bugs": {
-    "url": "https://github.com/Contrast-Security-Inc/node-fn-inspect/issues"
+    "url": "https://github.com/newrelic-forks/node-fn-inspect/issues"
   },
-  "homepage": "https://github.com/Contrast-Security-Inc/node-fn-inspect#readme",
+  "homepage": "https://github.com/newrelic-forks/node-fn-inspect#readme",
   "files": [
     "prebuilds/",
     "src/",
@@ -27,37 +27,30 @@
   "scripts": {
     "install": "node-gyp-build",
     "prepare": "husky install",
-    "prebuild": "npm run clean",
-    "build": "prebuildify -t 16.9.1 -t 18.7.0 -t 20.5.0 -t 22.2.0 -t 24.0.1 --strip --napi false",
-    "build:darwin": "npm run build -- --arch x64+arm64",
-    "build:win32": "npm run build",
-    "clean": "rimraf build/ coverage/ prebuilds/",
-    "download": "node scripts/download-artifacts.js",
-    "release": "gh workflow run release.yaml",
-    "test": "c8 --reporter lcov --reporter text mocha .",
-    "test:valgrind": "valgrind --xml=yes --xml-file=./valgrind.xml --trace-children=yes --leak-check=full --show-leak-kinds=all mocha . && node scripts/parse-valgrind.js"
+    "build": "node ./build.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "c8 -o ./coverage/unit borp --expose-gc --timeout 180000 '*.test.js'"
   },
   "engines": {
     "node": ">=16.9.1"
   },
   "dependencies": {
     "nan": "^2.22.2",
-    "node-gyp-build": "^4.8.1"
+    "node-gyp-build": "^4.8.1",
+    "prebuildify": "^6.0.1"
   },
   "devDependencies": {
-    "@contrast/eslint-config": "^3.2.0",
-    "@ls-lint/ls-lint": "^2.0.1",
-    "@octokit/rest": "^20.0.1",
+    "@newrelic/eslint-config": "^0.0.4",
+    "borp": "^0.20.0",
     "c8": "^8.0.1",
-    "chai": "^4.3.7",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-header": "^3.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "mocha": "^10.2.0",
-    "node-gyp": "^11.2.0",
-    "prebuildify": "^6.0.1",
-    "rimraf": "^5.0.9",
-    "semver": "^7.5.4",
-    "unzipper": "^0.12.2",
-    "xml-js": "^1.6.11"
+    "node-gyp": "^11.2.0"
   }
 }

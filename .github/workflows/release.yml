@@ -7,8 +7,6 @@ on:
         type: boolean
         required: true
         default: false
-env:
-  HUSKY: 0
 
 jobs:
   build_x86_x64:

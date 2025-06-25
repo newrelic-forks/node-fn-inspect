@@ -1,8 +1,3 @@
-/*
- * Copyright 2025 New Relic Corporation. All rights reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
-
 'use strict'
 const test = require('node:test')
 const assert = require('node:assert')
@@ -40,7 +35,7 @@ test('funcInfo', async function (t) {
     assert.deepEqual(results, {
       column: 16,
       file: expectedPath,
-      lineNumber: 8, // line numbers start at 0 in v8
+      lineNumber: 3, // line numbers start at 0 in v8
       method: '',
       type: 'Function'
     })
@@ -52,7 +47,7 @@ test('funcInfo', async function (t) {
     assert.deepEqual(results, {
       column: 30,
       file: expectedPath,
-      lineNumber: 13, // line numbers start at 0 in v8
+      lineNumber: 8, // line numbers start at 0 in v8
       method: 'named',
       type: 'Function'
     })
@@ -64,7 +59,7 @@ test('funcInfo', async function (t) {
     assert.deepEqual(results, {
       column: 24,
       file: expectedPath,
-      lineNumber: 15, // line numbers start at 0 in v8
+      lineNumber: 10, // line numbers start at 0 in v8
       method: '',
       type: 'Function'
     })
@@ -77,7 +72,7 @@ test('funcInfo', async function (t) {
     assert.deepEqual(results, {
       column: 19,
       file: __filename,
-      lineNumber: 73, // line numbers start at 0 in v8
+      lineNumber: 68, // line numbers start at 0 in v8
       method: 'inline',
       type: 'Function'
     })
@@ -90,7 +85,7 @@ test('funcInfo', async function (t) {
     assert.deepEqual(results, {
       column: 30,
       file: __filename,
-      lineNumber: 86, // line numbers start at 0 in v8
+      lineNumber: 81, // line numbers start at 0 in v8
       method: 'inlineAsync',
       type: 'AsyncFunction'
     })

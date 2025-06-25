@@ -1,8 +1,3 @@
-/*
- * Copyright 2024 New Relic Corporation. All rights reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
-
 'use strict'
 
 // If we are going to support Windows, we need some way to cobble together

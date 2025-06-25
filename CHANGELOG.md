@@ -1,3 +1,9 @@
+### v4.4.0 (2025-06-25)
+
+#### Features 
+
+* Added Node 24 to prebuilds and CI ([#78](https://github.com/Contrast-Security-Inc/node-fn-inspect/pull/78)) ([98651c6](https://github.com/newrelic-forks/node-fn-inspect/commit/98651c6f462b32afcc091f3749fa5ed67fbf6a3c))
+
 ### v4.2.0 (2024-06-06)
 
 #### Features

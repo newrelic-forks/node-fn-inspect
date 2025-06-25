@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const binding = require('node-gyp-build')(__dirname);
+const binding = require('node-gyp-build')(__dirname)
 
 module.exports = {
   /**
@@ -10,10 +10,12 @@ module.exports = {
    * @return {FunctionInfo | null}
    */
   funcInfo(fn) {
-    const info = binding.funcInfo(fn);
-    if (info === null) return null;
+    const info = binding.funcInfo(fn)
+    if (info === null) {
+      return null
+    }
 
-    info.type = fn.constructor.name;
-    return info;
-  },
-};
+    info.type = fn.constructor.name
+    return info
+  }
+}

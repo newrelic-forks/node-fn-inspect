@@ -33,7 +33,7 @@
     "test": "c8 -o ./coverage/unit borp --expose-gc --timeout 180000 '*.test.js'"
   },
   "engines": {
-    "node": ">=16.9.1"
+    "node": ">=22"
   },
   "dependencies": {
     "nan": "^2.22.2",

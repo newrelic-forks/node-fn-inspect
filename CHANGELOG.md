@@ -1,3 +1,17 @@
+### v5.0.0 (2026-05-05)
+#### ⚠ BREAKING CHANGES
+
+
+* Dropped support for Node 20
+
+#### Features
+
+* Dropped support for Node 20 ([#9](https://github.com/newrelic-forks/node-fn-inspect/pull/9)) ([9ec94be](https://github.com/newrelic-forks/node-fn-inspect/commit/9ec94be99eb6236aa4776ffa1b9c08bd363850a5))
+
+#### Miscellaneous chores
+
+* Update release workflow ([#8](https://github.com/newrelic-forks/node-fn-inspect/pull/8)) ([8669856](https://github.com/newrelic-forks/node-fn-inspect/commit/8669856c87661995ee82b8d56ab8bbdcc0b11c3b))
+
 ### v4.4.0 (2025-06-25)
 
 #### Features 

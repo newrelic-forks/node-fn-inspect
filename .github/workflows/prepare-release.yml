@@ -1,4 +1,6 @@
 name: Prepare Release PR
+permissions:
+  contents: read
 
 on:
   workflow_dispatch:
@@ -15,6 +17,9 @@ on:
 
 jobs:
   release-notes:
+    permissions:
+      contents: write
+      pull-requests: write
     uses: newrelic/node-newrelic/.github/workflows/prep-release.yml@main
     with:
       release_type: ${{ github.event.inputs.release_type }}

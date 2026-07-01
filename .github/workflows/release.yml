@@ -116,6 +116,9 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+          check-latest: true
       - run: |
           mkdir prebuilds
           rm -f .gitignore
@@ -153,6 +156,9 @@ jobs:
           repository: newrelic/node-newrelic
           path: agent-repo
       - uses: actions/setup-node@v6
+        with:
+          node-version: 'lts/*'
+          check-latest: true
       - run: |
           # Install agent-repo dependencies.
           npm install --prefix agent-repo
@@ -182,7 +188,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v6
         with:
-          node-version: lts/* 
+          node-version: 'lts/*' 
           registry-url: 'https://registry.npmjs.org'
           check-latest: true
       - uses: actions/download-artifact@v8

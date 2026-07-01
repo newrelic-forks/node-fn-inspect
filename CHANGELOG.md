@@ -1,3 +1,13 @@
+### v5.1.0 (2026-07-01)
+
+#### Features
+
+* Added support for Node.js 26 ([#15](https://github.com/newrelic-forks/node-fn-inspect/pull/15)) ([e86de0e](https://github.com/newrelic-forks/node-fn-inspect/commit/e86de0e85e0b719d2381bf8036eca1758418181d))
+
+#### Continuous integration
+
+* Added appropriate permissions to `prepare-release.yml` ([#14](https://github.com/newrelic-forks/node-fn-inspect/pull/14)) ([59ed113](https://github.com/newrelic-forks/node-fn-inspect/commit/59ed113c32a1c7cecea59707969dacd2139d3636))
+
 ### v5.0.0 (2026-05-05)
 #### ⚠ BREAKING CHANGES
 

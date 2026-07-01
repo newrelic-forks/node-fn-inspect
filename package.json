@@ -1,6 +1,6 @@
 {
   "name": "@newrelic/fn-inspect",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Retrieve function name and line number from a function reference",
   "keywords": [
     "instrumentation"
